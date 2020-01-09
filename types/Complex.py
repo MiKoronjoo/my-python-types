@@ -1,7 +1,15 @@
 class Complex(object):
     def __init__(self: 'Complex', real: [int, float], imag: [int, float]) -> None:
-        self.real = real
-        self.imag = imag
+        self._real = real
+        self._imag = imag
+
+    @property
+    def real(self):
+        return self._real
+
+    @property
+    def imag(self):
+        return self._imag
 
     def __add__(self: 'Complex', other: 'Complex') -> 'Complex':
         return Complex(self.real + other.real,
