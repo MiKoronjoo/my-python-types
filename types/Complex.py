@@ -1,7 +1,7 @@
 class Complex(object):
     def __init__(self: 'Complex', real: [int, float], imag: [int, float]) -> None:
-        self._real = real
-        self._imag = imag
+        self._real = real / 1
+        self._imag = imag / 1
 
     @property
     def real(self):
